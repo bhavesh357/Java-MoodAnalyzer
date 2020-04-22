@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class MoodAnalyserTest {
     MoodAnalyser moodAnalyser;
-
+    /*
     @Before
     public void initialize(){
         moodAnalyser = new MoodAnalyser();
@@ -19,5 +19,18 @@ public class MoodAnalyserTest {
     @Test
     public void whenGivenMessage_WhenAny_ReturnsHappy() {
         Assert.assertEquals("HAPPY",moodAnalyser.analyzeMood("I am in Any Mood"));
+    }*/
+
+    @Test
+    public void whenGivenMessage_WhenSad_ReturnsSad() {
+        moodAnalyser = new MoodAnalyser("I am in Sad Mood");
+        Assert.assertEquals("SAD",moodAnalyser.analyzeMood());
     }
+
+    @Test
+    public void whenNotGiveMessage_ReturnsSad() {
+        moodAnalyser = new MoodAnalyser();
+        Assert.assertEquals("SAD",moodAnalyser.analyzeMood());
+    }
+
 }
