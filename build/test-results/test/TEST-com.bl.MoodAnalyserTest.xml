@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.MoodAnalyserTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-22T15:30:15" hostname="SHIVAM-PC" time="0.006">
+<testsuite name="com.bl.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-22T15:38:42" hostname="SHIVAM-PC" time="0.005">
   <properties/>
-  <testcase name="whenGivenMessage_WhenSHappy_ReturnsHappy" classname="com.bl.MoodAnalyserTest" time="0.004"/>
-  <testcase name="whenNotGiveMessage_ReturnsHappy" classname="com.bl.MoodAnalyserTest" time="0.0"/>
-  <testcase name="whenGivenMessage_WhenSad_ReturnsSad" classname="com.bl.MoodAnalyserTest" time="0.0"/>
+  <testcase name="whenGivenNull_ShouldReturnHappy" classname="com.bl.MoodAnalyserTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
