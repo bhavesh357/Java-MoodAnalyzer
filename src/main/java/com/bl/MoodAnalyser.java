@@ -1,5 +1,7 @@
 package com.bl;
 
+import com.bl.extension.MoodAnalysisException;
+
 public class MoodAnalyser {
     String message;
 
@@ -11,7 +13,7 @@ public class MoodAnalyser {
         this.message = message;
     }
 
-    public String analyseMood() {
+    public String analyseMood() throws MoodAnalysisException {
         try{
             if(message.contains("Sad")){
                 return "SAD";
@@ -19,7 +21,7 @@ public class MoodAnalyser {
                 return "HAPPY";
             }
         }catch (NullPointerException e){
-            return "HAPPY";
+            throw new MoodAnalysisException(MoodAnalysisException.Error.MESSAGENULL,"Message is Null");
         }
     }
 }
