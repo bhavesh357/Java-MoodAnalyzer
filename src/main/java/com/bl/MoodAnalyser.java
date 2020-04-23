@@ -6,14 +6,14 @@ public class MoodAnalyser {
     String message;
 
     public MoodAnalyser() {
-        this("I am in Any Mood");
+
     }
 
     public MoodAnalyser(String message) {
         this.message = message;
     }
 
-    public String analyseMood() throws MoodAnalysisException {
+    public String analyseMood(String message) throws MoodAnalysisException {
         try{
             if(message.equals("")){
                 throw new MoodAnalysisException(MoodAnalysisException.Error.MESSAGEEMPTY,"Message is Empty");
@@ -26,5 +26,9 @@ public class MoodAnalyser {
         }catch (NullPointerException e){
             throw new MoodAnalysisException(MoodAnalysisException.Error.MESSAGENULL,"Message is Null");
         }
+    }
+
+    public String analyseMood() throws MoodAnalysisException {
+        return this.analyseMood(message);
     }
 }
