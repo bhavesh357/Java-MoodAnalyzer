@@ -2,6 +2,8 @@ package com.bl;
 
 import com.bl.extension.MoodAnalysisException;
 
+import java.util.Objects;
+
 public class MoodAnalyser {
     String message;
 
@@ -30,5 +32,18 @@ public class MoodAnalyser {
 
     public String analyseMood() throws MoodAnalysisException {
         return this.analyseMood(message);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MoodAnalyser that = (MoodAnalyser) o;
+        return Objects.equals(message, that.message);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(message);
     }
 }

@@ -1,6 +1,6 @@
 package com.bl.extension;
 
-public class MoodAnalysisException extends Exception{
+public class MoodAnalysisException extends RuntimeException{
     public enum Error{
         MESSAGEEMPTY, MESSAGENULL
     }
