@@ -78,4 +78,19 @@ public class MoodAnalyserTest {
             Assert.assertEquals("No Such Class Error",e.getMessage());
         }
     }
+    @Test
+    public void givenMethodParameter_WhenProper_ShouldReturnException(){
+            Object result = MoodAnalyserFactory.createObject("com.bl.MoodAnalyser",String.class,"I am in Sad Mood");
+            MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Sad Mood");
+            Assert.assertEquals(moodAnalyser,result);
+    }
+
+    @Test
+    public void givenMethodParameter_WhenImProper_ShouldReturnException(){
+        try {
+            Object result = MoodAnalyserFactory.createObject("com.bl.MoodAnalyser", Integer.class, "I am in Sad Mood");
+        }catch(MoodAnalysisException e){
+            Assert.assertEquals("No Such Method Error",e.getMessage());
+        }
+    }
 }

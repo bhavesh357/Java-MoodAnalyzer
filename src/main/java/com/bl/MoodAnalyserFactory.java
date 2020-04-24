@@ -11,10 +11,14 @@ public class MoodAnalyserFactory {
     }
 
     public static Object createObject(String className, String message) {
+        return createObject(className,String.class,message);
+    }
+
+    public static Object createObject(String className, Class<?> paraClass, String message) {
         Object myObj = null;
         try {
             Class<?> objClass = Class.forName(className);
-            Constructor<?> constructor = objClass.getConstructor(String.class);
+            Constructor<?> constructor = objClass.getConstructor(paraClass);
             myObj = constructor.newInstance(message);
         } catch (InstantiationException e) {
             e.printStackTrace();
@@ -25,7 +29,7 @@ public class MoodAnalyserFactory {
         } catch (ClassNotFoundException e) {
             throw new MoodAnalysisException(MoodAnalysisException.Error.CLASSWRONG,"No Such Class Error");
         } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+            throw new MoodAnalysisException(MoodAnalysisException.Error.METHODWRONG,"No Such Method Error");
         }
         return myObj;
     }
