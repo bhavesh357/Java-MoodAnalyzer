@@ -2,7 +2,7 @@ package com.bl.extension;
 
 public class MoodAnalysisException extends RuntimeException{
     public enum Error{
-        MESSAGEEMPTY, MESSAGENULL
+        MESSAGEEMPTY, MESSAGENULL,CLASSWRONG;
     }
 
     public MoodAnalysisException(Error error, String msg) {

@@ -1,14 +1,20 @@
 package com.bl;
 
+import com.bl.extension.MoodAnalysisException;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class MoodAnalyserFactory {
-    public static MoodAnalyser createMoodAnalyser(String message) {
+    public static Object createObject(String message) {
+        return createObject("com.bl.MoodAnalyser",message);
+    }
+
+    public static Object createObject(String className, String message) {
         Object myObj = null;
         try {
-            Class<?> moodAnalyserClass = Class.forName("com.bl.MoodAnalyser");
-            Constructor<?> constructor = moodAnalyserClass.getConstructor(String.class);
+            Class<?> objClass = Class.forName(className);
+            Constructor<?> constructor = objClass.getConstructor(String.class);
             myObj = constructor.newInstance(message);
         } catch (InstantiationException e) {
             e.printStackTrace();
@@ -17,10 +23,10 @@ public class MoodAnalyserFactory {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            throw new MoodAnalysisException(MoodAnalysisException.Error.CLASSWRONG,"No Such Class Error");
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
-        return (MoodAnalyser) myObj;
+        return myObj;
     }
 }
