@@ -79,7 +79,6 @@ public class MoodAnalyserTest {
         }
     }
 
-    /*
     @Test
     public void givenMethodParameter_WhenProper_ShouldReturnException(){
             Object result = MoodAnalyserFactory.createObject("com.bl.MoodAnalyser",String.class,"I am in Sad Mood");
@@ -96,5 +95,4 @@ public class MoodAnalyserTest {
         }
     }
 
-     */
 }
