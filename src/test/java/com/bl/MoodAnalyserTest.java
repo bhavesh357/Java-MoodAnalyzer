@@ -131,4 +131,15 @@ public class MoodAnalyserTest {
         Object mood = MoodAnalyserFactory.callMethod(result,"analyseMood");
     }
 
+    @Test
+    public void givenVariableName_WhenMessageNull_ShouldReturnMood() {
+        Object result = MoodAnalyserFactory.createObject("com.bl.MoodAnalyser",String.class,"I am in Sad Mood");
+        try{
+            MoodAnalyserFactory.changeVariable(result,"message",null);
+            Object mood = MoodAnalyserFactory.callMethod(result,"analyseMood");
+        }catch (MoodAnalysisException e) {
+            Assert.assertEquals("Message is Null", e.getMessage());
+        }
+    }
+
 }
