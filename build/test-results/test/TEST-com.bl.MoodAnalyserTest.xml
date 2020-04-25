@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-25T13:39:03" hostname="SHIVAM-PC" time="0.016">
+<testsuite name="com.bl.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-25T13:44:24" hostname="SHIVAM-PC" time="0.016">
   <properties/>
-  <testcase name="givenVariableName_WhenProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.016"/>
+  <testcase name="givenVariableName_WhenImProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

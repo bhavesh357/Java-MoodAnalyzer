@@ -104,7 +104,7 @@ public class MoodAnalyserTest {
         Assert.assertEquals("HAPPY",mood);
     }
     @Test
-    public void givenMethodName_WhenImProper_ShouldReturnMood() throws MoodAnalysisException {
+    public void givenMethodName_WhenImProper_ShouldReturnMood(){
         Object result = MoodAnalyserFactory.createObject("com.bl.MoodAnalyser",String.class,"I am in Happy Mood");
         try{
             Object mood = MoodAnalyserFactory.callMethod(result,"analyseMood");
@@ -118,6 +118,17 @@ public class MoodAnalyserTest {
         MoodAnalyserFactory.changeVariable(result,"message","I am in Happy Mood");
         Object mood = MoodAnalyserFactory.callMethod(result,"analyseMood");
         Assert.assertEquals("HAPPY",mood);
+    }
+
+    @Test
+    public void givenVariableName_WhenImProper_ShouldReturnMood() {
+        Object result = MoodAnalyserFactory.createObject("com.bl.MoodAnalyser",String.class,"I am in Sad Mood");
+        try{
+            MoodAnalyserFactory.changeVariable(result,"mesage","I am in Happy Mood");
+        }catch (MoodAnalysisException e) {
+            Assert.assertEquals("No Such Field Error",e.getMessage());
+        }
+        Object mood = MoodAnalyserFactory.callMethod(result,"analyseMood");
     }
 
 }
