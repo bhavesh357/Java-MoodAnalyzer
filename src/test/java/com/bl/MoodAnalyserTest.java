@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.InvocationTargetException;
+
 public class MoodAnalyserTest {
     MoodAnalyser moodAnalyser;
 
@@ -95,4 +97,10 @@ public class MoodAnalyserTest {
         }
     }
 
+    @Test
+    public void givenMethodName_WhenProper_ShouldReturnMood() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+        Object result = MoodAnalyserFactory.createObject("com.bl.MoodAnalyser",String.class,"I am in Happu Mood");
+        Object mood = MoodAnalyserFactory.callMethod(result,"analyseMood");
+        Assert.assertEquals("HAPPY",mood);
+    }
 }

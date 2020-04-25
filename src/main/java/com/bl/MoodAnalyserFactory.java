@@ -4,6 +4,7 @@ import com.bl.extension.MoodAnalysisException;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class MoodAnalyserFactory {
     public static Object createObject(String message) {
@@ -32,5 +33,10 @@ public class MoodAnalyserFactory {
             throw new MoodAnalysisException(MoodAnalysisException.Error.METHODWRONG,"No Such Method Error");
         }
         return myObj;
+    }
+
+    public static Object callMethod(Object result, String methodName) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Method method = result.getClass().getDeclaredMethod(methodName);
+        return method.invoke(result);
     }
 }

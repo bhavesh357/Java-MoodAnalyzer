@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.MoodAnalyserTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2020-04-24T15:15:33" hostname="SHIVAM-PC" time="0.15">
+<testsuite name="com.bl.MoodAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-25T13:20:31" hostname="SHIVAM-PC" time="7.253">
   <properties/>
-  <testcase name="whenGivenMessageInConstructor_WhenSHappy_ReturnsHappy" classname="com.bl.MoodAnalyserTest" time="0.014"/>
-  <testcase name="givenClassName_WhenImProper_ShouldReturnException" classname="com.bl.MoodAnalyserTest" time="0.038"/>
-  <testcase name="whenGivenNull_ShouldReturnExceptionMessage" classname="com.bl.MoodAnalyserTest" time="0.003"/>
-  <testcase name="givenMethodParameter_WhenProper_ShouldReturnException" classname="com.bl.MoodAnalyserTest" time="0.002"/>
-  <testcase name="whenGivenMessage_WhenAny_ReturnsHappy" classname="com.bl.MoodAnalyserTest" time="0.0"/>
-  <testcase name="whenGivenEmpty_ShouldReturnExceptionMessage" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="whenGivenMessageInConstructor_WhenSad_ReturnsSad" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="givenMoodAnalyserMessage_WhenProper_ShouldReturnObject" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="whenGivenMessage_WhenSad_ReturnsSad" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="givenClassName_WhenProper_ShouldReturnObject" classname="com.bl.MoodAnalyserTest" time="0.012"/>
-  <testcase name="givenMethodParameter_WhenImProper_ShouldReturnException" classname="com.bl.MoodAnalyserTest" time="0.001"/>
+  <testcase name="givenMethodName_WhenProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="7.253"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
