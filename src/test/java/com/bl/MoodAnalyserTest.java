@@ -103,4 +103,13 @@ public class MoodAnalyserTest {
         Object mood = MoodAnalyserFactory.callMethod(result,"analyseMood");
         Assert.assertEquals("HAPPY",mood);
     }
+    @Test
+    public void givenMethodName_WhenImProper_ShouldReturnMood() throws MoodAnalysisException {
+        Object result = MoodAnalyserFactory.createObject("com.bl.MoodAnalyser",String.class,"I am in Happu Mood");
+        try{
+            Object mood = MoodAnalyserFactory.callMethod(result,"analyseMood");
+        } catch(MoodAnalysisException e){
+            Assert.assertEquals("No Such Method Error",e.getMessage());
+        }
+    }
 }

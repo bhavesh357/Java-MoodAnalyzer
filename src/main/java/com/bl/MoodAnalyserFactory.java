@@ -35,8 +35,20 @@ public class MoodAnalyserFactory {
         return myObj;
     }
 
-    public static Object callMethod(Object result, String methodName) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        Method method = result.getClass().getDeclaredMethod(methodName);
-        return method.invoke(result);
+    public static Object callMethod(Object result, String methodName) {
+        Method method = null;
+        try {
+            method = result.getClass().getDeclaredMethod(methodName);
+        } catch (NoSuchMethodException e) {
+            throw new MoodAnalysisException(MoodAnalysisException.Error.METHODWRONG,"No Such Method Error");
+        }
+        try {
+            return method.invoke(result);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
