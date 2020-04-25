@@ -3,6 +3,7 @@ package com.bl;
 import com.bl.extension.MoodAnalysisException;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -50,5 +51,16 @@ public class MoodAnalyserFactory {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static void changeVariable(Object result, String variableName, String message) {
+        try {
+            Field variable = result.getClass().getDeclaredField(variableName);
+            variable.set(result,message);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
