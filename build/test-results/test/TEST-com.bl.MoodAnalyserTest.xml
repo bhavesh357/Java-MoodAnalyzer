@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.MoodAnalyserTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2020-04-25T13:50:45" hostname="SHIVAM-PC" time="0.123">
+<testsuite name="com.bl.MoodAnalyserTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2020-04-25T14:09:01" hostname="SHIVAM-PC" time="0.095">
   <properties/>
-  <testcase name="givenVariableName_WhenMessageNull_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.08"/>
-  <testcase name="givenMethodName_WhenImProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.001"/>
+  <testcase name="givenVariableName_WhenMessageNull_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.066"/>
+  <testcase name="givenMethodName_WhenImProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.0"/>
   <testcase name="whenGivenMessageInConstructor_WhenSHappy_ReturnsHappy" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="givenClassName_WhenImProper_ShouldReturnException" classname="com.bl.MoodAnalyserTest" time="0.003"/>
+  <testcase name="givenClassName_WhenImProper_ShouldReturnException" classname="com.bl.MoodAnalyserTest" time="0.001"/>
   <testcase name="whenGivenNull_ShouldReturnExceptionMessage" classname="com.bl.MoodAnalyserTest" time="0.0"/>
   <testcase name="givenMethodParameter_WhenProper_ShouldReturnException" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="whenGivenMessage_WhenAny_ReturnsHappy" classname="com.bl.MoodAnalyserTest" time="0.0"/>
+  <testcase name="whenGivenMessage_WhenAny_ReturnsHappy" classname="com.bl.MoodAnalyserTest" time="0.001"/>
   <testcase name="whenGivenEmpty_ShouldReturnExceptionMessage" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="whenGivenMessageInConstructor_WhenSad_ReturnsSad" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="givenVariableName_WhenProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.001"/>
+  <testcase name="whenGivenMessageInConstructor_WhenSad_ReturnsSad" classname="com.bl.MoodAnalyserTest" time="0.0"/>
+  <testcase name="givenVariableName_WhenProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.0"/>
   <testcase name="givenMethodName_WhenProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.0"/>
   <testcase name="givenMoodAnalyserMessage_WhenProper_ShouldReturnObject" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="whenGivenMessage_WhenSad_ReturnsSad" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="givenVariableName_WhenImProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.001"/>
-  <testcase name="givenClassName_WhenProper_ShouldReturnObject" classname="com.bl.MoodAnalyserTest" time="0.002"/>
-  <testcase name="givenMethodParameter_WhenImProper_ShouldReturnException" classname="com.bl.MoodAnalyserTest" time="0.005"/>
+  <testcase name="whenGivenMessage_WhenSad_ReturnsSad" classname="com.bl.MoodAnalyserTest" time="0.0"/>
+  <testcase name="givenVariableName_WhenImProper_ShouldReturnMood" classname="com.bl.MoodAnalyserTest" time="0.0"/>
+  <testcase name="givenClassName_WhenProper_ShouldReturnObject" classname="com.bl.MoodAnalyserTest" time="0.0"/>
+  <testcase name="givenMethodParameter_WhenImProper_ShouldReturnException" classname="com.bl.MoodAnalyserTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[java.lang.reflect.InvocationTargetException
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
